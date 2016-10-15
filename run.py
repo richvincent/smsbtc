@@ -10,7 +10,7 @@ def hello_monkey():
     """Respond to incoming calls with a simple test message."""
 
     resp = twilio.twiml.Response()
-    resp.message("Hello, Mobile Monkey")
+    resp.message("SMS Blockchain System")
     return str(resp)
 
 if __name__ == "__main__":
