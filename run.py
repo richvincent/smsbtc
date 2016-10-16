@@ -9,6 +9,8 @@ app = Flask(__name__)
 def sms():
     number = request.form['From']
     message_body = request.form['Body']
+    if message_body == '$btcprice':
+        message_body = 'You would like to know the market price of bitcoin?'
 
     resp = twilio.twiml.Response()
     resp.message('Hello {}, you said: {}'.format(number, message_body))
