@@ -1,4 +1,5 @@
 from flask import Flask, request, redirect
+from blockchain import exchangerates
 import twilio.twiml
 import os
 
@@ -10,7 +11,9 @@ def sms():
     number = request.form['From']
     message_body = request.form['Body']
     if message_body == '$btcprice':
-        message_body = 'You would like to know the market price of bitcoin?'
+        ticker = exchangerates.get_ticker()
+        btc_price = ticker['USD'].p15min
+        message_body = 'The price for 1 bitcoin in USD is {}'.format(btc_price)
 
     resp = twilio.twiml.Response()
     resp.message('Hello {}, you said: {}'.format(number, message_body))
