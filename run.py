@@ -16,7 +16,7 @@ def sms():
         message_body = 'The price for 1 bitcoin in USD is {}'.format(btc_price)
 
     resp = twilio.twiml.Response()
-    resp.message('Hello {}, you said: {}'.format(number, message_body))
+    resp.message('Hello {}, {}'.format(number, message_body))
     return str(resp)
 
 if __name__ == "__main__":
