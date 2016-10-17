@@ -17,7 +17,7 @@ def sms():
     sms_attribute = message_parts[1].upper()
 
     if sms_command == '$listcurrencies':
-        message_body = str(list(ticker))
+        message_body = 'This is a test'
         resp.message(message_body)
         return(str(resp))
 
