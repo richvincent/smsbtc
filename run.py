@@ -14,7 +14,6 @@ def sms():
     resp = twilio.twiml.Response()
     ticker = exchangerates.get_ticker()
     sms_command = message_parts[0]
-    sms_attribute = message_parts[1].upper()
 
     if sms_command == '$listcurrencies':
         message_body = 'This is a test'
@@ -26,6 +25,7 @@ def sms():
             message_body = "Please properly form command"
             resp.message(message_body)
             return(str(resp))
+        sms_attribute = message_parts[1].upper()
         if sms_attribute in ticker:
             btc_price = ticker[sms_attribute].p15min
             spot_price = btc_price*1.125
