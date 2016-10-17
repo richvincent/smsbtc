@@ -10,7 +10,10 @@ app = Flask(__name__)
 def sms():
     number = request.form['From']
     message_body = request.form['Body']
-    if message_body == '$btcprice':
+    message_parts = message_body.split()
+    sms_command = message_parts[0]
+
+    if sms_command == '$btcprice':
         ticker = exchangerates.get_ticker()
         btc_price = ticker['USD'].p15min
         spot_price = btc_price*1.125
