@@ -25,9 +25,7 @@ def sms():
         if sms_attribute in ticker:
             btc_price = ticker[sms_attribute].p15min
             spot_price = btc_price*1.125
-            message_body = 'The price for 1 bitcoin in {} is {}. The spot price\
-                for btc purchase is\
-                {} {}'.format(sms_attribute, btc_price, spot_price, sms_attribute)
+            message_body = "The price for 1 bitcoin in {} is {}. The spot price for btc purchase is {} {}".format(sms_attribute, btc_price, spot_price, sms_attribute)
         else:
             message_body = "Unsupported currency {}".format(sms_attribute)
 
