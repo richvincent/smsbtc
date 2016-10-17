@@ -11,6 +11,12 @@ def sms():
     number = request.form['From']
     message_body = request.form['Body']
     message_parts = message_body.split()
+    resp = twilio.twiml.Response()
+    if len(message_parts) != 2:
+        message_body = "Please properly form command"
+        resp.message(message_body)
+        return(str(resp))
+
     sms_command = message_parts[0]
 
     if sms_command == '$btcprice':
@@ -20,7 +26,6 @@ def sms():
         message_body = 'The price for 1 bitcoin in USD is {}.\
             The spot price for btc purchase is {}'.format(btc_price, spot_price)
 
-    resp = twilio.twiml.Response()
     resp.message('Hello {}, {}'.format(number, message_body))
     return str(resp)
 
