@@ -18,13 +18,15 @@ def sms():
         return(str(resp))
 
     sms_command = message_parts[0]
+    sms_attribute = message_parts[1]
 
     if sms_command == '$btcprice':
         ticker = exchangerates.get_ticker()
-        btc_price = ticker['USD'].p15min
-        spot_price = btc_price*1.125
-        message_body = 'The price for 1 bitcoin in USD is {}.\
-            The spot price for btc purchase is {}'.format(btc_price, spot_price)
+        if sms_attribute in ticker:
+            btc_price = ticker[sms_attribute].p15min
+            spot_price = btc_price*1.125
+            message_body = 'The price for 1 bitcoin in USD is {}.\
+                The spot price for btc purchase is {}'.format(btc_price, spot_price)
 
     resp.message('Hello {}, {}'.format(number, message_body))
     return str(resp)
