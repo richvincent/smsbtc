@@ -15,7 +15,7 @@ def sms():
         btc_price = ticker['USD'].p15min
         spot_price = btc_price*1.15
         message_body = 'The price for 1 bitcoin\
-            in USD is {}\\n\
+            in USD is {}\n\
             The spot price for btc purchase is {}'.format(btc_price, spot_price)
 
     resp = twilio.twiml.Response()
