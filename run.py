@@ -28,6 +28,8 @@ def sms():
             message_body = 'The price for 1 bitcoin in {} is {}.\
                 The spot price for btc purchase is\
                 {} {}'.format(sms_attribute, btc_price, spot_price, sms_attribute)
+        else:
+            message_body = "Unsupported currency {}".format(sms_attribute)
 
     resp.message('Hello {}, {}'.format(number, message_body))
     return str(resp)
