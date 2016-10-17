@@ -12,16 +12,19 @@ def sms():
     message_body = request.form['Body']
     message_parts = message_body.split()
     resp = twilio.twiml.Response()
-    if len(message_parts) != 2:
-        message_body = "Please properly form command"
-        resp.message(message_body)
-        return(str(resp))
-
+    ticker = exchangerates.get_ticker()
     sms_command = message_parts[0]
     sms_attribute = message_parts[1].upper()
 
+    if sms_command == '$listcurrencies':
+        resp.message(str(list(ticker)))
+        return(str(resp))
+
     if sms_command == '$btcprice':
-        ticker = exchangerates.get_ticker()
+        if len(message_parts) != 2:
+            message_body = "Please properly form command"
+            resp.message(message_body)
+            return(str(resp))
         if sms_attribute in ticker:
             btc_price = ticker[sms_attribute].p15min
             spot_price = btc_price*1.125
