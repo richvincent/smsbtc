@@ -18,7 +18,7 @@ def sms():
         return(str(resp))
 
     sms_command = message_parts[0]
-    sms_attribute = message_parts[1]
+    sms_attribute = message_parts[1].upper()
 
     if sms_command == '$btcprice':
         ticker = exchangerates.get_ticker()
