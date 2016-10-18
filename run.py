@@ -22,7 +22,7 @@ def sms():
 
     if sms_command == '$btcprice':
         if len(message_parts) != 2:
-            message_body = "Please properly form command"
+            message_body = "Please properly form command. ie $btcprice usd. Please enter $help for more info"
             resp.message(message_body)
             return(str(resp))
         sms_currency = message_parts[1].upper()
