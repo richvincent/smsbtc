@@ -57,6 +57,15 @@ def sms():
             resp.message(message_body)
             return(str(resp))
 
+    if sms_command == "$test":
+        message_body = """
+                          This is a test.
+                          This is another test.
+                          This is yet another test.
+                       """
+        resp.message(message_body)
+        return(str(resp))
+
     resp.message('Hello {}, {}'.format(number, message_body))
     return str(resp)
 
