@@ -47,16 +47,15 @@ def sms():
             return(str(resp))
         sms_currency = message_parts[2].upper()
         if sms_currency in ticker:
-            btc_price = ticker[sms_currency].p15min
-            spot_price = btc_price*1.125
-            message_body = "The price for 1 bitcoin in {} is {}. The spot price for btc purchase is {} {}".format(sms_currency, btc_price, spot_price, sms_currency)
+            btc_amount = exchangerates.to_btc(sms_currency, sms_amount)
+            spot_price = sms_amount*1.125
+            message_body = "{}btc = {} {} ;{} {} spot price for purchase".format(btc_amount, sms_amount, sms_currency, spot_price, sms_currency)
+            resp.message(message_body)
+            return(str(resp))
         else:
             message_body = "Unsupported currency {}".format(sms_currency)
-        btc_amount = exchangerates.to_btc(sms_currency, sms_amount)
-        spot_price = btc_amount*1.125
-        message_body = "{}btc = {} {} price;{} {} spot price".format(btc_amount, sms_amount, sms_currency, spot_price, sms_currency)
-        resp.message(message_body)
-        return(str(resp))
+            resp.message(message_body)
+            return(str(resp))
 
     resp.message('Hello {}, {}'.format(number, message_body))
     return str(resp)
