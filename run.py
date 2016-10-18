@@ -57,11 +57,12 @@ def sms():
             resp.message(message_body)
             return(str(resp))
 
-    if sms_command == "$test":
-        message_body = """
-        This is a test
-        This is another test
-        This is yet another test....
+    if sms_command == "$help":
+        message_body = """List of valid commands:
+        -> $listcurrencies - Lists currencies currently supported
+        -> $btcprice - Lists Bitcoin price in requested currency - ie $btcprice usd
+        -> $btcconvert - Converts specified currency amount to Bitcoin - ie $btcconvert 100.00 eur
+        -> For further assistance call or text 313-482-8558
         """
         resp.message(message_body)
         return(str(resp))
