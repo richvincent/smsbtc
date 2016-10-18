@@ -45,7 +45,7 @@ def sms():
             message_body = "Please properly form command. $btcconvert <amount as integer or float"
             resp.message(message_body)
             return(str(resp))
-        sms_currency = message_parts[1].upper()
+        sms_currency = message_parts[2].upper()
         if sms_currency in ticker:
             btc_price = ticker[sms_currency].p15min
             spot_price = btc_price*1.125
