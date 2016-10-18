@@ -58,11 +58,9 @@ def sms():
             return(str(resp))
 
     if sms_command == "$test":
-        message_body = """
-                          This is a test.
-                          This is another test.
-                          This is yet another test.
-                       """
+        message_body = "This is a test\n\
+            This is another test\n\
+            This is yet another test...."
         resp.message(message_body)
         return(str(resp))
 
