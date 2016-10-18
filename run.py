@@ -25,13 +25,38 @@ def sms():
             message_body = "Please properly form command"
             resp.message(message_body)
             return(str(resp))
-        sms_attribute = message_parts[1].upper()
-        if sms_attribute in ticker:
-            btc_price = ticker[sms_attribute].p15min
+        sms_currency = message_parts[1].upper()
+        if sms_currency in ticker:
+            btc_price = ticker[sms_currency].p15min
             spot_price = btc_price*1.125
-            message_body = "The price for 1 bitcoin in {} is {}. The spot price for btc purchase is {} {}".format(sms_attribute, btc_price, spot_price, sms_attribute)
+            message_body = "The price for 1 bitcoin in {} is {}. The spot price for btc purchase is {} {}".format(sms_currency, btc_price, spot_price, sms_currency)
         else:
-            message_body = "Unsupported currency {}".format(sms_attribute)
+            message_body = "Unsupported currency {}".format(sms_currency)
+
+    if sms_command == '$btcconvert':
+        if len(message_parts) != 3:
+            message_body = "Please properly form command. $btcconvert <amount as integer or float"
+            resp.message(message_body)
+            return(str(resp))
+        sms_amount = message_parts[1]
+        try:
+            sms_amount = float(sms_amount)
+        except ValueError:
+            message_body = "Please properly form command. $btcconvert <amount as integer or float"
+            resp.message(message_body)
+            return(str(resp))
+        sms_currency = message_parts[1].upper()
+        if sms_currency in ticker:
+            btc_price = ticker[sms_currency].p15min
+            spot_price = btc_price*1.125
+            message_body = "The price for 1 bitcoin in {} is {}. The spot price for btc purchase is {} {}".format(sms_currency, btc_price, spot_price, sms_currency)
+        else:
+            message_body = "Unsupported currency {}".format(sms_currency)
+        btc_amount = exchangerates.to_btc(sms_currency, sms_amount)
+        spot_price = btc_amount*1.125
+        message_body = "{}btc = {} {} price;{} {} spot price".format(btc_amount, sms_amount, sms_currency, spot_price, sms_currency)
+        resp.message(message_body)
+        return(str(resp))
 
     resp.message('Hello {}, {}'.format(number, message_body))
     return str(resp)
