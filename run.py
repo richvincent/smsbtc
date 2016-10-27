@@ -67,6 +67,13 @@ def sms():
         resp.message(message_body)
         return(str(resp))
 
+
+    message_body = """List of valid commands:
+    -> $listcurrencies - Lists currencies currently supported
+    -> $btcprice - Lists Bitcoin price in requested currency - ie $btcprice usd
+    -> $btcconvert - Converts specified currency amount to Bitcoin - ie $btcconvert 100.00 eur
+    -> For further assistance call or text 313-482-8558
+    """
     resp.message('Hello {}, {}'.format(number, message_body))
     return str(resp)
 
