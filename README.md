@@ -1,13 +1,13 @@
-smsbtc
+<h1>smsbtc</h1>
 The purpose of this project is to provide a simple SMS interface for accessing Bitcoin information.
 
 The interface for this project is strictly SMS.
 
-This project is written using Python 3 programming language and the Flask, blockchain.info, and Twilio twiml API's
+This project is written using Python 3 programming language and the <a href="https://flask.pocoo.org/docs/0.11">Flask</a>, <a href="https://blockchain.info/api">blockchain.info</a>, and <a href="https://www.twilio.com/docs/api/twiml">Twilio twiml</a> API's
 
 To use the Twilio APIs you will have to register for a trial account. Register for a free API key here http://www.twilio.com/try-twilio
 
-An Twilio number is required for this to work as well.
+A <a href="https://www.twilio.com/phone-numbers">Twilio number</a> is required for this to work as well.
 
 run.py runs as a Flask server. I published the project to Heroku but it worked fine on AWS EC2 as well.
 
