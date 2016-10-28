@@ -14,6 +14,13 @@ def sms():
     resp = twilio.twiml.Response()
     ticker = exchangerates.get_ticker()
     sms_command = message_parts[0]
+    help_message = """List of valid commands:
+        -> $listcurrencies - Lists currencies currently supported
+        -> $btcprice - Lists Bitcoin price in requested currency - ie $btcprice usd
+        -> $btcconvert - Converts specified currency amount to Bitcoin - ie $btcconvert 100.00 eur
+        -> For further assistance call or text 313-482-8558
+        """
+
 
     if sms_command == '$listcurrencies':
         message_body = str(list(ticker))
@@ -58,22 +65,12 @@ def sms():
             return(str(resp))
 
     if sms_command == "$help":
-        message_body = """List of valid commands:
-        -> $listcurrencies - Lists currencies currently supported
-        -> $btcprice - Lists Bitcoin price in requested currency - ie $btcprice usd
-        -> $btcconvert - Converts specified currency amount to Bitcoin - ie $btcconvert 100.00 eur
-        -> For further assistance call or text 313-482-8558
-        """
+        message_body = help_message
         resp.message(message_body)
         return(str(resp))
 
 
-    message_body = """List of valid commands:
-    -> $listcurrencies - Lists currencies currently supported
-    -> $btcprice - Lists Bitcoin price in requested currency - ie $btcprice usd
-    -> $btcconvert - Converts specified currency amount to Bitcoin - ie $btcconvert 100.00 eur
-    -> For further assistance call or text 313-482-8558
-    """
+    message_body = help_message
     resp.message('Hello {}, {}'.format(number, message_body))
     return str(resp)
 
