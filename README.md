@@ -28,7 +28,21 @@ List of valid commands:<br>
 -> <b>$btcconvert</b> - Converts specified currency amount to Bitcoin - ie $btcconvert 100.00 eur<br>
 -> <b>$help</b> - Returns a list of valid commands<br>
 <br>
+<h2>About</h2>
+A majority of the global population is unbanked and lack access to global financial instruments.
+This same large global unbanked population does indeed usually have access to cell service and SMS messaging. The hope is to provide
+access to the Bitcoin economy through SMS messaging.
+
+The project source code can be located at <a href="https://github.com/richvincent/smsbtc">https://github.com/richvincent/smsbtc</a>. Please feel free to critique, contribute, or both
+
+Author: Richard Vincent<br>
+<a href="mailto:rich@richardvincent.com">rich@richardvincent.com</a><br>
+313-482-8558<br>
+
+<br>
 <h2>References:</h2>
 <ul>
     <li><a href="https://www.twilio.com/docs/quickstart/python/sms/hello-monkey">Twilio Python Flask Example:</a></li>
-
+    <li><a href="http://www.worldbank.org/en/programs/globalfindex">Global Findex Database</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/Unbanked">Wiki article on the Unbanked</a></li>
+</ul>

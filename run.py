@@ -19,6 +19,7 @@ def sms():
         -> $btcprice - Lists Bitcoin price in requested currency - ie $btcprice usd
         -> $btcconvert - Converts specified currency amount to Bitcoin - ie $btcconvert 100.00 eur
         -> $help - Returns a list of valid commands
+        -> $about - Returns information about author and application
         -> For further assistance call or text 313-482-8558
         """
 
@@ -67,6 +68,23 @@ def sms():
 
     if sms_command == "$help":
         message_body = help_message
+        resp.message(message_body)
+        return(str(resp))
+
+
+    if sms_command == "$about":
+        message_body = """ A majority of the global population is unbanked and lack access to global financial instruments.
+        This same large global unbanked population does indeed usually have access to cell service and SMS messaging. The hope is to provide
+        access to the Bitcoin economy through SMS messaging.
+
+        The project source code can be located at https://github.com/richvincent/smsbtc. Please feel free to critique, contribute, or both
+
+        Author: Richard Vincent
+        rich@richardvincent.com
+        313-482-8558
+
+        ref: https://en.wikipedia.org/wiki/Unbanked
+        """
         resp.message(message_body)
         return(str(resp))
 
