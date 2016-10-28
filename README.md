@@ -9,7 +9,7 @@ To use the Twilio APIs you will have to register for a trial account. Register f
 
 A <a href="https://www.twilio.com/phone-numbers">Twilio number</a> is required for this to work as well.
 
-run.py runs as a Flask server. I published the project to <a href="http://www.heroku.com">Heroku</a> but it worked fine on <a href="https://aws.amazon.com/ec2">AWS EC2</a> as well <em>Although this is a little more complex.</em>
+run.py runs as a Flask server. I published the project to <a href="http://www.heroku.com">Heroku</a> but it worked fine on <a href="https://aws.amazon.com/ec2">AWS EC2</a> as well <em>*Although this is a little more advanced and complex.</em>
 
 Your public facing Flask server URL and port needs to be integrated into Twilio "Programmable SMS" messaging services request URL field.
 
@@ -27,3 +27,8 @@ List of valid commands:<br>
 -> <b>$btcprice</b> - Lists Bitcoin price in requested currency - ie $btcprice usd<br>
 -> <b>$btcconvert</b> - Converts specified currency amount to Bitcoin - ie $btcconvert 100.00 eur<br>
 -> <b>$help</b> - Returns a list of valid commands<br>
+<br>
+<h2>References:</h2>
+<ul>
+    <li><a href="https://www.twilio.com/docs/quickstart/python/sms/hello-monkey">Twilio Python Flask Example:</a></li>
+
