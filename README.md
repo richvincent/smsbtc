@@ -9,7 +9,7 @@ To use the Twilio APIs you will have to register for a trial account. Register f
 
 A <a href="https://www.twilio.com/phone-numbers">Twilio number</a> is required for this to work as well.
 
-run.py runs as a Flask server. I published the project to <a href="http://www.heroku.com">Heroku</a> but it worked fine on <a href="https://aws.amazon.com/ec2">AWS EC2</a> as well <em>*Although this option is a little more advanced and complex to configure.</em>
+run.py runs as a Flask server. I published the project to <a href="http://www.heroku.com">Heroku</a> the application worked just fine on also.<a href="https://aws.amazon.com/ec2">AWS EC2</a> <em>*Although the AWS option is a little more advanced and complex to configure.</em>
 
 Your public facing Flask server URL and port need to be integrated into Twilio "Programmable SMS" messaging services request URL field.
 
