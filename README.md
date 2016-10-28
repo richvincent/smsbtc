@@ -1,9 +1,9 @@
 <h1>smsbtc</h1>
-The purpose of this project is to provide a simple SMS interface for accessing Bitcoin information.
+The purpose of this project is to demonstrate a simple SMS interface for accessing Bitcoin information.
 
 The interface for this project is strictly SMS.
 
-This project is written using Python 3 programming language and the <a href="https://flask.pocoo.org/docs/0.11">Flask</a>, <a href="https://blockchain.info/api">blockchain.info</a>, and <a href="https://www.twilio.com/docs/api/twiml">Twilio twiml</a> API's
+This project is written using the Python 3 programming language and the <a href="https://flask.pocoo.org/docs/0.11">Flask</a>, <a href="https://blockchain.info/api">blockchain.info</a>, and <a href="https://www.twilio.com/docs/api/twiml">Twilio twiml</a> API's
 
 To use the Twilio APIs you will have to register for a trial account. Register for a free API key here http://www.twilio.com/try-twilio
 
@@ -18,12 +18,11 @@ Once the run.py is running and globally accessible the btcSMS is ready to use.
 <h2>Instructions for SMSbtc:</h2>
 
 Commands are sent to the server via SMS commands to your Twilio phone number:
-
-ie if your Twilio phone number is +12223334444
+ie if your Twilio phone number is <b>+12223334444</b>
 
 Send text messages proceeded by the '$' symbol to the number
 
-List of valid commands:
--> <b>$listcurrencies</b> - Lists currencies currently supported by symbol
--> <b>$btcprice</b> - Lists Bitcoin price in requested currency - ie $btcprice usd
--> <b>$btcconvert</b> - Converts specified currency amount to Bitcoin - ie $btcconvert 100.00 eur
+List of valid commands:<br>
+-> <b>$listcurrencies</b> - Lists currencies currently supported by symbol<br>
+-> <b>$btcprice</b> - Lists Bitcoin price in requested currency - ie $btcprice usd<br>
+-> <b>$btcconvert</b> - Converts specified currency amount to Bitcoin - ie $btcconvert 100.00 eur<br>
