@@ -9,21 +9,21 @@ To use the Twilio APIs you will have to register for a trial account. Register f
 
 A <a href="https://www.twilio.com/phone-numbers">Twilio number</a> is required for this to work as well.
 
-run.py runs as a Flask server. I published the project to Heroku but it worked fine on AWS EC2 as well.
+run.py runs as a Flask server. I published the project to <a href="http://www.heroku.com">Heroku</a> but it worked fine on <a href="https://aws.amazon.com/ec2">AWS EC2</a> as well <em>Although this is a little more complex.</em>
 
 Your public facing Flask server URL and port needs to be integrated into Twilio "Programmable SMS" messaging services request URL field.
 
 Once the run.py is running and globally accessible the btcSMS is ready to use.
 
-Instructions for SMSbtc:
+<h2>Instructions for SMSbtc:</h2>
 
-Instructions are sent to the server via SMS commands to your Twilio phone number:
+Commands are sent to the server via SMS commands to your Twilio phone number:
 
 ie if your Twilio phone number is +12223334444
 
 Send text messages proceeded by the '$' symbol to the number
 
 List of valid commands:
--> $listcurrencies - Lists currencies currently supported by symbol
--> $btcprice - Lists Bitcoin price in requested currency - ie $btcprice usd
--> $btcconvert - Converts specified currency amount to Bitcoin - ie $btcconvert 100.00 eur
+-> <b>$listcurrencies</b> - Lists currencies currently supported by symbol
+-> <b>$btcprice</b> - Lists Bitcoin price in requested currency - ie $btcprice usd
+-> <b>$btcconvert</b> - Converts specified currency amount to Bitcoin - ie $btcconvert 100.00 eur
