@@ -27,6 +27,7 @@ List of valid commands:<br>
 -> <b>$btcprice</b> - Lists Bitcoin price in requested currency - ie $btcprice usd<br>
 -> <b>$btcconvert</b> - Converts specified currency amount to Bitcoin - ie $btcconvert 100.00 eur<br>
 -> <b>$help</b> - Returns a list of valid commands<br>
+-> <b>$about</b> - Returns information about author and application<br>
 <br>
 <h2>About</h2>
 A majority of the global population is unbanked and lack access to global financial instruments.
