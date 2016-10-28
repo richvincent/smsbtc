@@ -3,7 +3,7 @@ The purpose of this project is to demonstrate a simple SMS interface for accessi
 
 The interface for this project is strictly SMS.
 
-This project is written using the Python 3 programming language and the <a href="https://flask.pocoo.org/docs/0.11">Flask</a>, <a href="https://blockchain.info/api">blockchain.info</a>, and <a href="https://www.twilio.com/docs/api/twiml">Twilio twiml</a> API's
+This project is written using the Python 3 programming language and the <a href="http://flask.pocoo.org/">Flask</a>, <a href="https://blockchain.info/api">blockchain.info</a>, and <a href="https://www.twilio.com/docs/api/twiml">Twilio twiml</a> API's
 
 To use the Twilio APIs you will have to register for a trial account. Register for a free API key here http://www.twilio.com/try-twilio
 
