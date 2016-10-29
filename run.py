@@ -39,8 +39,10 @@ def sms():
             btc_price = round(ticker[sms_currency].p15min,4)
             spot_price = round(btc_price*1.125,4)
             message_body = "The price for 1 bitcoin is {} {}. The spot price for btc purchase is {} {}".format(btc_price, sms_currency, spot_price, sms_currency)
+            return(str(resp))
         else:
             message_body = "Unsupported currency {}".format(sms_currency)
+            return(str(resp))
 
     if sms_command == '$btcconvert':
         if len(message_parts) != 3:
