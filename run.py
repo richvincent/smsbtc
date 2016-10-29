@@ -78,13 +78,14 @@ def sms():
 
     if sms_command == "$about":
         message_body = """ A majority of the global population is unbanked and lack access to global financial instruments.
-        This same large global unbanked population does indeed usually have access to cell service and SMS messaging. The hope is to provide
-        access to the Bitcoin economy through SMS messaging.
+        This same large global unbanked population does indeed usually have access to cell service and SMS messaging.
+        The hope is to provide access to the Bitcoin economy through SMS messaging.
 
         The project source code can be located at https://github.com/richvincent/smsbtc. Please feel free to critique, contribute, or both
 
         Author: Richard Vincent
         rich@richardvincent.com
+        @rkvincent
         313-482-8558
 
         ref: https://en.wikipedia.org/wiki/Unbanked
