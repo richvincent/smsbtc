@@ -44,6 +44,7 @@ Author: Richard Vincent<br>
 <br>
 <h2>References:</h2>
 <ul>
+    <li><a href="http://www.bitcoin.org">Bitcoin Foundation Website</a></li>
     <li><a href="https://www.twilio.com/docs/quickstart/python/sms/hello-monkey">Twilio Python Flask Example:</a></li>
     <li><a href="http://www.worldbank.org/en/programs/globalfindex">Global Findex Database</a></li>
     <li><a href="https://en.wikipedia.org/wiki/Unbanked">Wiki article on the Unbanked</a></li>
