@@ -50,3 +50,11 @@ Author: Richard Vincent<br>
     <li><a href="http://www.worldbank.org/en/programs/globalfindex">Global Findex Database (http://www.worldbank.org/en/programs/globalfindex)</a></li>
     <li><a href="https://en.wikipedia.org/wiki/Unbanked">Wiki article on the Unbanked (https://en.wikipedia.org/wiki/Unbanked)</a></li>
 </ul>
+
+<br>
+<h2>Working Example</h2>
+To try out a working example of this project send a text to +13132283671 use the commands presented above. This example is using a Twilio demo account and free tier Heroku account so performance might not be the best.
+
+Message me if you have a issue @rkvincent / rich@richardvincent.com
+
+Please try to break it (and tell me how you did it)
