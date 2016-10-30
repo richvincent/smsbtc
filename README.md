@@ -25,7 +25,7 @@ Send text messages proceeded by the '$' symbol to the number
 List of valid commands:<br>
 -> <b>$listcurrencies</b> - Lists currencies currently supported by symbol<br>
 -> <b>$btcprice</b> - Lists Bitcoin price in requested currency - ie $btcprice usd<br>
--> <b>$btcconvert</b> - Converts specified currency amount to Bitcoin - ie $btcconvert 100.00 eur<br>
+-> <b>$currencyconvert</b> - Converts specified currency amount to Bitcoin - ie $currencyconvert 100.00 eur<br>
 -> <b>$help</b> - Returns a list of valid commands<br>
 -> <b>$about</b> - Returns information about author and application<br>
 <em>*note: Any other inputs will return the help message </em>

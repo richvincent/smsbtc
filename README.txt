@@ -24,8 +24,8 @@ number: ie if your Twilio phone number is +12223334444 Send text messages
 proceeded by the '$' symbol to the number List of valid commands:
 -> $listcurrencies - Lists currencies currently supported by symbol
 -> $btcprice - Lists Bitcoin price in requested currency - ie $btcprice usd
--> $btcconvert - Converts specified currency amount to Bitcoin - ie $btcconvert
-100.00 eur
+-> $currencyconvert - Converts specified currency amount to Bitcoin - ie
+$currencyconvert 100.00 eur
 -> $help - Returns a list of valid commands
 -> $about - Returns information about author and application
 *note: Any other inputs will return the help message

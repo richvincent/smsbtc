@@ -17,7 +17,7 @@ def sms():
     help_message = """List of valid commands:
         -> $listcurrencies - Lists currencies currently supported by symbol
         -> $btcprice - Lists Bitcoin price in requested currency - ie $btcprice usd
-        -> $btcconvert - Converts specified currency amount to Bitcoin - ie $btcconvert 100.00 eur
+        -> $currencyconvert - Converts specified currency amount to Bitcoin - ie $currencyconvert 100.00 eur
         -> $help - Returns a list of valid commands
         -> $about - Returns information about author and application
         -> For further assistance call or text 313-482-8558
@@ -46,16 +46,16 @@ def sms():
             resp.message(message_body)
             return(str(resp))
 
-    if sms_command == '$btcconvert':
+    if sms_command == '$currencyconvert':
         if len(message_parts) != 3:
-            message_body = "Please properly form command. $btcconvert <amount as integer or float"
+            message_body = "Please properly form command. $currencyconvert <amount as integer or float"
             resp.message(message_body)
             return(str(resp))
         sms_amount = message_parts[1]
         try:
             sms_amount = float(sms_amount)
         except ValueError:
-            message_body = "Please properly form command. $btcconvert <amount as integer or float"
+            message_body = "Please properly form command. $currencyconvert <amount as integer or float"
             resp.message(message_body)
             return(str(resp))
         sms_currency = message_parts[2].upper()
@@ -92,7 +92,6 @@ def sms():
         """
         resp.message(message_body)
         return(str(resp))
-
 
     message_body = help_message
     resp.message('Hello {}, {}'.format(number, message_body))
