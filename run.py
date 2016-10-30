@@ -18,6 +18,7 @@ def sms():
         -> $listcurrencies - Lists currencies currently supported by symbol
         -> $btcprice - Lists Bitcoin price in requested currency - ie $btcprice usd
         -> $currencyconvert - Converts specified currency amount to Bitcoin - ie $currencyconvert 100.00 eur
+        -> $btcconvert - Converts specified amount of bitcoin to chosen currency - ie $btcconvert .17 usd
         -> $help - Returns a list of valid commands
         -> $about - Returns information about author and application
         -> For further assistance call or text 313-482-8558
