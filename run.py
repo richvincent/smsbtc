@@ -62,7 +62,7 @@ def sms():
         if sms_currency in ticker:
             btc_amount = round(exchangerates.to_btc(sms_currency, sms_amount),4)
             spot_price = round(sms_amount*1.125,4)
-            message_body = "{}btc = {} {} ;{} {} spot price for purchase".format(btc_amount, sms_amount, sms_currency, spot_price, sms_currency)
+            message_body = "{} {} = {} btc; {} {} spot price for purchase".format(sms_amount, sms_currency, btc_amount, spot_price, sms_currency)
             resp.message(message_body)
             return(str(resp))
         else:
