@@ -62,7 +62,32 @@ def sms():
         if sms_currency in ticker:
             btc_amount = round(exchangerates.to_btc(sms_currency, sms_amount),4)
             spot_price = round(sms_amount*1.125,4)
-            message_body = "{} {} = {} btc; {} {} spot price for purchase".format(sms_amount, sms_currency, btc_amount, spot_price, sms_currency)
+            message_body = "{} {} = {} btc; {} {} spot price for purchase of this amount of bticoin".format(sms_amount, sms_currency, btc_amount, spot_price, sms_currency)
+            resp.message(message_body)
+            return(str(resp))
+        else:
+            message_body = "Unsupported currency {}".format(sms_currency)
+            resp.message(message_body)
+            return(str(resp))
+
+    if sms_command == '$btcconvert':
+        if len(message_parts) != 3:
+            message_body = "Please properly form command. $btcconvert <amount as integer or float"
+            resp.message(message_body)
+            return(str(resp))
+        sms_amount = message_parts[1]
+        try:
+            sms_amount = float(sms_amount)
+        except ValueError:
+            message_body = "Please properly form command. $btcconvert <amount as integer or float"
+            resp.message(message_body)
+            return(str(resp))
+        sms_currency = message_parts[2].upper()
+        if sms_currency in ticker:
+            btc_price = ticker[sms_currency].p15min
+            btc_convert = round(btc_price*sms_amount,4)
+            spot_price = round(btc_convert*1.125,4)
+            message_body = "{} btc = {} {}; {} {} spot price for purchase of this amount of bticoin".format(sms_amount, btc_convert, sms_currency, spot_price, sms_currency)
             resp.message(message_body)
             return(str(resp))
         else:

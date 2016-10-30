@@ -9,7 +9,7 @@ To use the Twilio APIs you will have to register for a trial account. Register f
 
 A <a href="https://www.twilio.com/phone-numbers">Twilio number (https://www.twilio.com/phone-numbers)</a> is required for this to work as well.
 
-run.py runs as a Flask server. I published the project to <a href="http://www.heroku.com">Heroku (http://www.heroku.com)</a> the application worked just fine on <a href="https://aws.amazon.com/ec2">AWS EC2 (https://aws.amazon.com/ec2)</a> <em>*Although the AWS option is a little more advanced and complex to configure.</em>
+run.py runs as a Flask server. I published the project to <a href="http://www.heroku.com">Heroku (http://www.heroku.com)</a> the application worked just fine when deployed using <a href="https://aws.amazon.com/ec2">AWS EC2 (https://aws.amazon.com/ec2)</a> <em>as well. *Although the AWS option is a little more advanced and complex to configure.</em>
 
 Your public facing Flask server URL and port need to be integrated into Twilio "Programmable SMS" messaging services request URL field.
 
@@ -26,6 +26,7 @@ List of valid commands:<br>
 -> <b>$listcurrencies</b> - Lists currencies currently supported by symbol<br>
 -> <b>$btcprice</b> - Lists Bitcoin price in requested currency - ie $btcprice usd<br>
 -> <b>$currencyconvert</b> - Converts specified currency amount to Bitcoin - ie $currencyconvert 100.00 eur<br>
+-> <b>$btcconvert</b> - Converts specified amount of bitcoin to chosen currency - ie $btcconvert .17 usd<br>
 -> <b>$help</b> - Returns a list of valid commands<br>
 -> <b>$about</b> - Returns information about author and application<br>
 <em>*note: Any other inputs will return the help message </em>
