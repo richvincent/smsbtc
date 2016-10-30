@@ -49,14 +49,14 @@ def sms():
 
     if sms_command == '$currencyconvert':
         if len(message_parts) != 3:
-            message_body = "Please properly form command. $currencyconvert <amount as integer or float"
+            message_body = "Please properly form command. ie $currencyconvert 100 usd"
             resp.message(message_body)
             return(str(resp))
         sms_amount = message_parts[1]
         try:
             sms_amount = float(sms_amount)
         except ValueError:
-            message_body = "Please properly form command. $currencyconvert <amount as integer or float"
+            message_body = "Please properly form command. ie $currencyconvert 100 usd"
             resp.message(message_body)
             return(str(resp))
         sms_currency = message_parts[2].upper()
@@ -73,14 +73,14 @@ def sms():
 
     if sms_command == '$btcconvert':
         if len(message_parts) != 3:
-            message_body = "Please properly form command. $btcconvert <amount as integer or float"
+            message_body = "Please properly form command. ie $btcconvert .17 usd"
             resp.message(message_body)
             return(str(resp))
         sms_amount = message_parts[1]
         try:
             sms_amount = float(sms_amount)
         except ValueError:
-            message_body = "Please properly form command. $btcconvert <amount as integer or float"
+            message_body = "Please properly form command. ie $btcconvert .17 usd"
             resp.message(message_body)
             return(str(resp))
         sms_currency = message_parts[2].upper()
