@@ -37,11 +37,11 @@ This same large global unbanked population does indeed usually have access to ce
 access to the Bitcoin economy through SMS messaging.
 
 The project source code can be located at <a href="https://github.com/richvincent/smsbtc">https://github.com/richvincent/smsbtc</a>. Please feel free to critique, contribute, or both
-
+<br>
 Author: Richard Vincent<br>
 <a href="mailto:rich@richardvincent.com">rich@richardvincent.com</a><br>
 313-482-8558<br>
-
+twtr: @rkvincent
 <br>
 <h2>References:</h2>
 <ul>
