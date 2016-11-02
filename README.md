@@ -19,7 +19,6 @@ List of valid commands:<br>
 -> <b>$help</b> - Returns a list of valid commands<br>
 -> <b>$about</b> - Returns information about author and application<br>
 <em>*note: Any other inputs will return the help message </em>
-<br>
 
 <h2>Working Example</h2>
 To try out a working example of this project send a text to +13132283671 use the commands presented above. This example is using a Twilio demo account and free tier Heroku account so performance might not be the best.
@@ -28,7 +27,6 @@ Message me if you have a issue  <a href="https://twitter.com/rkvincent">@rkvince
 
 Please try to break it (and tell me how you did it)
 
-<br>
 
 <h2>Under the Hood</h2>
 
