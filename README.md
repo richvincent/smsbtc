@@ -45,7 +45,7 @@ The project source code can be located at <a href="https://github.com/richvincen
 Author: Richard Vincent<br>
 <a href="mailto:rich@richardvincent.com">rich@richardvincent.com</a><br>
 313-482-8558<br>
-twtr: @rkvincent
+twtr: <a href="https://twitter.com/rkvincent">@rkvincent</a>
 <br>
 <h2>References:</h2>
 <ul>
@@ -59,6 +59,6 @@ twtr: @rkvincent
 <h2>Working Example</h2>
 To try out a working example of this project send a text to +13132283671 use the commands presented above. This example is using a Twilio demo account and free tier Heroku account so performance might not be the best.
 
-Message me if you have a issue @rkvincent / rich@richardvincent.com
+Message me if you have a issue  <a href="https://twitter.com/rkvincent">@rkvincent</a> / <a href="mailto:rich@richardvincent.com">rich@richardvincent.com</a>
 
 Please try to break it (and tell me how you did it)
