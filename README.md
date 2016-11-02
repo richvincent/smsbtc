@@ -21,6 +21,15 @@ List of valid commands:<br>
 <em>*note: Any other inputs will return the help message </em>
 <br>
 
+<h2>Working Example</h2>
+To try out a working example of this project send a text to +13132283671 use the commands presented above. This example is using a Twilio demo account and free tier Heroku account so performance might not be the best.
+
+Message me if you have a issue  <a href="https://twitter.com/rkvincent">@rkvincent</a> / <a href="mailto:rich@richardvincent.com">rich@richardvincent.com</a>
+
+Please try to break it (and tell me how you did it)
+
+<br>
+
 <h2>Under the Hood</h2>
 
 This project is written using the Python 3 programming language and the <a href="http://flask.pocoo.org/">Flask (http://flask.pocoo.org/)</a>, <a href="https://blockchain.info/api">blockchain.info (https://blockchain.info/api)</a>, and <a href="https://www.twilio.com/docs/api/twiml">Twilio twiml (https://www.twilio.com/docs/api/twiml)</a> API's
@@ -55,10 +64,3 @@ twtr: <a href="https://twitter.com/rkvincent">@rkvincent</a>
     <li><a href="https://en.wikipedia.org/wiki/Unbanked">Wiki article on the Unbanked (https://en.wikipedia.org/wiki/Unbanked)</a></li>
 </ul>
 
-<br>
-<h2>Working Example</h2>
-To try out a working example of this project send a text to +13132283671 use the commands presented above. This example is using a Twilio demo account and free tier Heroku account so performance might not be the best.
-
-Message me if you have a issue  <a href="https://twitter.com/rkvincent">@rkvincent</a> / <a href="mailto:rich@richardvincent.com">rich@richardvincent.com</a>
-
-Please try to break it (and tell me how you did it)

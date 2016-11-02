@@ -21,6 +21,14 @@ $btcconvert .17 usd
 -> $about - Returns information about author and application
 *note: Any other inputs will return the help message
 
+Working Example
+
+To try out a working example of this project send a text to +13132283671 use
+the commands presented above. This example is using a Twilio demo account and
+free tier Heroku account so performance might not be the best. Message me if
+you have a issue @rkvincent / rich@richardvincent.com Please try to break it
+(and tell me how you did it)
+
 Under the Hood
 
 This project is written using the Python 3 programming language and the Flask_
@@ -59,12 +67,3 @@ References:
 * Global_Findex_Database_(http://www.worldbank.org/en/programs/globalfindex)
 * Wiki_article_on_the_Unbanked_(https://en.wikipedia.org/wiki/Unbanked)
 
-
-
-Working Example
-
-To try out a working example of this project send a text to +13132283671 use
-the commands presented above. This example is using a Twilio demo account and
-free tier Heroku account so performance might not be the best. Message me if
-you have a issue @rkvincent / rich@richardvincent.com Please try to break it
-(and tell me how you did it)
