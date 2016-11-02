@@ -1,7 +1,27 @@
 <h1>smsbtc</h1>
+
 The purpose of this project is to demonstrate a simple SMS interface for accessing Bitcoin information.
 
 The interface for this project is strictly SMS.
+
+<h2>Instructions for SMSbtc:</h2>
+
+Commands are sent to the server via SMS messages sent to your Twilio phone number:
+ie if your Twilio phone number is <b>+12223334444</b>
+
+Send text messages proceeded by the '$' symbol to the number<br>
+
+List of valid commands:<br>
+-> <b>$listcurrencies</b> - Lists currencies currently supported by symbol<br>
+-> <b>$btcprice</b> - Lists Bitcoin price in requested currency - ie $btcprice usd<br>
+-> <b>$currencyconvert</b> - Converts specified currency amount to Bitcoin - ie $currencyconvert 100.00 eur<br>
+-> <b>$btcconvert</b> - Converts specified amount of bitcoin to chosen currency - ie $btcconvert .17 usd<br>
+-> <b>$help</b> - Returns a list of valid commands<br>
+-> <b>$about</b> - Returns information about author and application<br>
+<em>*note: Any other inputs will return the help message </em>
+<br>
+
+<h2>Under the Hood</h2>
 
 This project is written using the Python 3 programming language and the <a href="http://flask.pocoo.org/">Flask (http://flask.pocoo.org/)</a>, <a href="https://blockchain.info/api">blockchain.info (https://blockchain.info/api)</a>, and <a href="https://www.twilio.com/docs/api/twiml">Twilio twiml (https://www.twilio.com/docs/api/twiml)</a> API's
 
@@ -15,22 +35,6 @@ Your public facing Flask server URL and port need to be integrated into Twilio "
 
 Once the run.py is running and globally accessible the btcSMS is ready to use.
 
-<h2>Instructions for SMSbtc:</h2>
-
-Commands are sent to the server via SMS messages sent to your Twilio phone number:
-ie if your Twilio phone number is <b>+12223334444</b>
-
-Send text messages proceeded by the '$' symbol to the number
-
-List of valid commands:<br>
--> <b>$listcurrencies</b> - Lists currencies currently supported by symbol<br>
--> <b>$btcprice</b> - Lists Bitcoin price in requested currency - ie $btcprice usd<br>
--> <b>$currencyconvert</b> - Converts specified currency amount to Bitcoin - ie $currencyconvert 100.00 eur<br>
--> <b>$btcconvert</b> - Converts specified amount of bitcoin to chosen currency - ie $btcconvert .17 usd<br>
--> <b>$help</b> - Returns a list of valid commands<br>
--> <b>$about</b> - Returns information about author and application<br>
-<em>*note: Any other inputs will return the help message </em>
-<br>
 <h2>About</h2>
 A large portion of the global population is unbanked and lacks access to global financial instruments.
 This same large global unbanked population does indeed usually have access to cell service and SMS messaging. The hope is to provide
