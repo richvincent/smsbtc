@@ -35,6 +35,35 @@
 
 <p>The interface for this project is strictly SMS.</p>
 
+<h2>
+<a id="instructions-for-smsbtc" class="anchor" href="#instructions-for-smsbtc" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Instructions for SMSbtc:</h2>
+
+<p>Commands are sent to the server via SMS messages sent to your Twilio phone number:
+ie if your Twilio phone number is <b>+12223334444</b></p>
+
+<p>Send text messages proceeded by the '$' symbol to the number<br></p>
+
+<p>List of valid commands:<br>
+-&gt; <b>$listcurrencies</b> - Lists currencies currently supported by symbol<br>
+-&gt; <b>$btcprice</b> - Lists Bitcoin price in requested currency - ie $btcprice usd<br>
+-&gt; <b>$currencyconvert</b> - Converts specified currency amount to Bitcoin - ie $currencyconvert 100.00 eur<br>
+-&gt; <b>$btcconvert</b> - Converts specified amount of bitcoin to chosen currency - ie $btcconvert .17 usd<br>
+-&gt; <b>$help</b> - Returns a list of valid commands<br>
+-&gt; <b>$about</b> - Returns information about author and application<br>
+<em>*note: Any other inputs will return the help message </em></p>
+
+<h2>
+<a id="working-example" class="anchor" href="#working-example" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Working Example</h2>
+
+<p>To try out a working example of this project send a text to +13132283671 use the commands presented above. This example is using a Twilio demo account and free tier Heroku account so performance might not be the best.</p>
+
+<p>Message me if you have a issue  <a href="https://twitter.com/rkvincent">@rkvincent</a> / <a href="mailto:rich@richardvincent.com"></a><a href="mailto:rich@richardvincent.com">rich@richardvincent.com</a></p>
+
+<p>Please try to break it (and tell me how you did it)</p>
+
+<h2>
+<a id="under-the-hood" class="anchor" href="#under-the-hood" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Under the Hood</h2>
+
 <p>This project is written using the Python 3 programming language and the <a href="http://flask.pocoo.org/">Flask (</a><a href="http://flask.pocoo.org/">http://flask.pocoo.org/</a>), <a href="https://blockchain.info/api">blockchain.info (</a><a href="https://blockchain.info/api">https://blockchain.info/api</a>), and <a href="https://www.twilio.com/docs/api/twiml">Twilio twiml (</a><a href="https://www.twilio.com/docs/api/twiml">https://www.twilio.com/docs/api/twiml</a>) API's</p>
 
 <p>To use the Twilio APIs you will have to register for a trial account. Register for a free API key here <a href="http://www.twilio.com/try-twilio">http://www.twilio.com/try-twilio</a></p>
@@ -48,24 +77,6 @@
 <p>Once the run.py is running and globally accessible the btcSMS is ready to use.</p>
 
 <h2>
-<a id="instructions-for-smsbtc" class="anchor" href="#instructions-for-smsbtc" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Instructions for SMSbtc:</h2>
-
-<p>Commands are sent to the server via SMS messages sent to your Twilio phone number:
-ie if your Twilio phone number is <b>+12223334444</b></p>
-
-<p>Send text messages proceeded by the '$' symbol to the number</p>
-
-<p>List of valid commands:<br>
--&gt; <b>$listcurrencies</b> - Lists currencies currently supported by symbol<br>
--&gt; <b>$btcprice</b> - Lists Bitcoin price in requested currency - ie $btcprice usd<br>
--&gt; <b>$currencyconvert</b> - Converts specified currency amount to Bitcoin - ie $currencyconvert 100.00 eur<br>
--&gt; <b>$btcconvert</b> - Converts specified amount of bitcoin to chosen currency - ie $btcconvert .17 usd<br>
--&gt; <b>$help</b> - Returns a list of valid commands<br>
--&gt; <b>$about</b> - Returns information about author and application<br>
-<em>*note: Any other inputs will return the help message </em>
-<br></p>
-
-<h2>
 <a id="about" class="anchor" href="#about" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>About</h2>
 
 <p>A large portion of the global population is unbanked and lacks access to global financial instruments.
@@ -77,7 +88,7 @@ access to the Bitcoin economy through SMS messaging.</p>
 Author: Richard Vincent<br>
 <a href="mailto:rich@richardvincent.com"></a><a href="mailto:rich@richardvincent.com">rich@richardvincent.com</a><br>
 313-482-8558<br>
-twtr: @rkvincent
+twtr: <a href="https://twitter.com/rkvincent">@rkvincent</a>
 <br></p>
 
 <h2>
@@ -89,17 +100,6 @@ twtr: @rkvincent
     <li><a href="http://www.worldbank.org/en/programs/globalfindex">Global Findex Database (http://www.worldbank.org/en/programs/globalfindex)</a></li>
     <li><a href="https://en.wikipedia.org/wiki/Unbanked">Wiki article on the Unbanked (https://en.wikipedia.org/wiki/Unbanked)</a></li>
 </ul>
-
-<p><br></p>
-
-<h2>
-<a id="working-example" class="anchor" href="#working-example" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Working Example</h2>
-
-<p>To try out a working example of this project send a text to +13132283671 use the commands presented above. This example is using a Twilio demo account and free tier Heroku account so performance might not be the best.<br>
-<br>
-Message me if you have a issue @rkvincent / <a href="mailto:rich@richardvincent.com">rich@richardvincent.com</a><br>
-<br>
-Please try to break it (and tell me how you did it)</p>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/richvincent">richvincent</a></p>
